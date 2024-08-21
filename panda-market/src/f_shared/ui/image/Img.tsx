@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { match } from 'ts-pattern';
 
@@ -10,7 +10,7 @@ type ImageErrorType = { type: 'success' } | { type: 'default' };
 type ImageType = { type: 'item' } | { type: 'profile' };
 
 interface ImgProps {
-  src?: string;
+  src?: string | StaticImageData;
   alt: string;
   imgType: ImgUseType;
 }
